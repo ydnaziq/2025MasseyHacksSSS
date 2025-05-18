@@ -385,6 +385,6 @@ metadata/fill = false
 position = Vector2(4523, -284)
 
 [node name="EnemyTrashcan2" parent="." instance=ExtResource("25_bjha6")]
-position = Vector2(7405, -298)
+position = Vector2(7405, -258)
 
 [connection signal="body_entered" from="first_check" to="Player" method="_on_first_check_body_entered"]

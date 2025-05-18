@@ -37,7 +37,7 @@ func _process(_delta):
 func _physics_process(_delta):
 	if Input.is_action_pressed("Jump") && stopJump && canJump:
 		velocity.y = velocity.y - jumpAcceleration
-		if velocity.y < -700:
+		if velocity.y < -800:
 			stopJump = false
 	if Input.is_action_just_released("Jump"):
 		canJump = false
