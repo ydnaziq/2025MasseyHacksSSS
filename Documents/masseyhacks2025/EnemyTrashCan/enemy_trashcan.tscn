@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b56tnvr461xbh"]
+
+[ext_resource type="Script" uid="uid://cgbkfd73wwbrl" path="res://EnemyTrashCan/enemy_trashcan.tres.gd" id="1_4ne4p"]
+[ext_resource type="Texture2D" uid="uid://dbtfkpyxxunbq" path="res://assets/trashcan.png" id="2_jakbb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4ghn"]
+size = Vector2(64, 194)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0t3b"]
+size = Vector2(80, 205)
+
+[node name="EnemyTrashcan" type="Area2D"]
+script = ExtResource("1_4ne4p")
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_p4ghn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_jakbb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_n0t3b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]

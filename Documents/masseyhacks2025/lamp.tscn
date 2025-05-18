@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh7xx44vmj2h3"]
+
+[ext_resource type="Texture2D" uid="uid://bk6yp78ys867u" path="res://assets/lamp.png" id="1_uno5e"]
+[ext_resource type="Texture2D" uid="uid://c6vdi5ykv6y3f" path="res://assets/point_light.png" id="2_vxcd3"]
+[ext_resource type="Texture2D" uid="uid://cgf7ehdwcity2" path="res://assets/directional_light.jpg" id="3_vxcd3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uno5e"]
+
+[node name="Lamp" type="Sprite2D"]
+material = SubResource("ShaderMaterial_uno5e")
+texture = ExtResource("1_uno5e")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-272, 236)
+scale = Vector2(5.11235, 7.02556)
+energy = 2.87
+shadow_enabled = true
+texture = ExtResource("3_vxcd3")
+height = 25.0
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(-171, 1205)
+scale = Vector2(5.69922, 1.76563)
+energy = 2.3
+shadow_enabled = true
+texture = ExtResource("2_vxcd3")

@@ -1,0 +1,388 @@
+[gd_scene load_steps=37 format=3 uid="uid://cjnyx7fh2ouus"]
+
+[ext_resource type="Texture2D" uid="uid://o26iqusflewv" path="res://assets/sidewalk.png" id="1_epypp"]
+[ext_resource type="Script" uid="uid://jckh0ugkge2b" path="res://scripts/world_environment.gd" id="1_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://cvohwtxcntqy2" path="res://assets/tree.png" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://cxwi4g57hblcf" path="res://scripts/canvas_modulate.gd" id="2_e8dv2"]
+[ext_resource type="PackedScene" uid="uid://bh7xx44vmj2h3" path="res://lamp.tscn" id="2_fs4d3"]
+[ext_resource type="Texture2D" uid="uid://piljce4vqc5x" path="res://assets/vending_machine.png" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://31vqewlowhkm" path="res://assets/bench.png" id="5_d21ai"]
+[ext_resource type="PackedScene" uid="uid://dy18ug1ou5bkl" path="res://player/player.tscn" id="6_kdubu"]
+[ext_resource type="Script" uid="uid://dvdn38px3c7kl" path="res://scripts/camera_2d.gd" id="7_d21ai"]
+[ext_resource type="Texture2D" uid="uid://bbvtgrlds1xoe" path="res://assets/wall2.png" id="8_hqns4"]
+[ext_resource type="PackedScene" uid="uid://dj0nbgcpnroy5" path="res://CollectableTrash/collectable_trash.tscn" id="8_rj586"]
+[ext_resource type="Script" uid="uid://bnte4cvjqux8a" path="res://scripts/bird.gd" id="10_ei405"]
+[ext_resource type="Texture2D" uid="uid://dg0beiha0b6mj" path="res://assets/dirt.png" id="12_ta5nu"]
+[ext_resource type="Texture2D" uid="uid://xjc1786woih1" path="res://assets/background-removebg-preview.png" id="12_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://07nuspvpgc6n" path="res://assets/bird.png" id="13_0h7mo"]
+[ext_resource type="PackedScene" uid="uid://detav06gw3iw5" path="res://CollectableTrash/collectable_trash_scene_2.tscn" id="13_2nhjh"]
+[ext_resource type="Texture2D" uid="uid://b1prk4q13sjoh" path="res://assets/cat.png" id="14_d2bti"]
+[ext_resource type="Texture2D" uid="uid://baybfpat7mnuh" path="res://assets/rpse.png" id="16_flf07"]
+[ext_resource type="Script" uid="uid://b3y860thwtfl1" path="res://scripts/first_check.gd" id="16_k73cj"]
+[ext_resource type="Texture2D" uid="uid://ofk3x3owkiu7" path="res://assets/man.png" id="16_ta5nu"]
+[ext_resource type="Script" uid="uid://dk5s6tsnn6y2m" path="res://scripts/directional_light_2d.gd" id="19_7vxoj"]
+[ext_resource type="Script" uid="uid://chwre4q6t24lr" path="res://scripts/global.gd" id="19_rjqkl"]
+[ext_resource type="FontFile" uid="uid://b1s2mxajxrlhl" path="res://assets/font/BaseballClubSolid-E4X69.ttf" id="20_fs4d3"]
+[ext_resource type="Script" uid="uid://vyufh53m621k" path="res://rich_text_label.gd" id="21_7vxoj"]
+[ext_resource type="PackedScene" uid="uid://b56tnvr461xbh" path="res://EnemyTrashCan/enemy_trashcan.tscn" id="25_bjha6"]
+[ext_resource type="Script" uid="uid://bogigoihm8cmk" path="res://scripts/rich_text_label.gd" id="25_gt76g"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7vxoj"]
+
+[sub_resource type="Sky" id="Sky_hqns4"]
+sky_material = SubResource("PanoramaSkyMaterial_7vxoj")
+
+[sub_resource type="Environment" id="Environment_q6r6c"]
+background_mode = 2
+background_color = Color(0.525813, 0.353466, 0.425205, 1)
+sky = SubResource("Sky_hqns4")
+sky_custom_fov = 11.5
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 5.77
+glow_strength = 1.48
+glow_hdr_threshold = 0.71
+glow_hdr_scale = 1.35
+glow_hdr_luminance_cap = 1.35
+glow_map_strength = 0.0
+fog_light_energy = 16.0
+fog_sun_scatter = 1.0
+fog_density = 1.0
+volumetric_fog_density = 0.068
+adjustment_enabled = true
+adjustment_brightness = 0.78
+adjustment_saturation = 1.55
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0ka3"]
+size = Vector2(4451, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
+size = Vector2(4746.78, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h7mo"]
+size = Vector2(83, 772)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]
+size = Vector2(1154, 77.25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fs4d3"]
+polygon = PackedVector2Array(-575, -74.25, 563, -72.25, 563, -14.25, 45, -12.25, -579, -12.25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7vxoj"]
+polygon = PackedVector2Array(-13.3333, -131.667, -131.667, -8.33337, -200, 116.667, -223.333, 181.667, 115, 195, 218.333, 178.333, 158.333, 76.6666, 115, 13.3333, 83.3333, -56.6666, 46.6667, -128.333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ta5nu"]
+size = Vector2(24.9995, 3665)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q6r6c")
+script = ExtResource("1_ir8iy")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.266667, 0.266667, 0.266667, 1)
+script = ExtResource("2_e8dv2")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="lamps" type="Node2D" parent="environment"]
+
+[node name="Lamp4" parent="environment/lamps" instance=ExtResource("2_fs4d3")]
+z_index = -1
+position = Vector2(8784, -1115)
+
+[node name="Lamp3" parent="environment/lamps" instance=ExtResource("2_fs4d3")]
+position = Vector2(7712, -1118)
+
+[node name="Lamp2" parent="environment/lamps" instance=ExtResource("2_fs4d3")]
+position = Vector2(2454, -1140)
+
+[node name="Lamp" parent="environment/lamps" instance=ExtResource("2_fs4d3")]
+position = Vector2(5848, -1119)
+
+[node name="sidewalk" type="Node2D" parent="environment"]
+
+[node name="Sidewalk" type="Sprite2D" parent="environment/sidewalk"]
+position = Vector2(1215, -76)
+scale = Vector2(0.9804, 1.03333)
+texture = ExtResource("1_epypp")
+
+[node name="Sidewalk4" type="Sprite2D" parent="environment/sidewalk"]
+position = Vector2(8601, -78)
+texture = ExtResource("1_epypp")
+
+[node name="Sidewalk2" type="Sprite2D" parent="environment/sidewalk"]
+position = Vector2(3537, -89)
+texture = ExtResource("1_epypp")
+
+[node name="Sidewalk3" type="Sprite2D" parent="environment/sidewalk"]
+position = Vector2(6474, -75)
+texture = ExtResource("1_epypp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/sidewalk/Sidewalk3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/sidewalk/Sidewalk3/StaticBody2D"]
+position = Vector2(1041, 4)
+shape = SubResource("RectangleShape2D_x0ka3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/sidewalk"]
+position = Vector2(4914.5, -72.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/sidewalk/StaticBody2D"]
+position = Vector2(-2511.89, -18.5)
+shape = SubResource("RectangleShape2D_d21ai")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="environment/sidewalk"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/sidewalk/StaticBody2D2"]
+position = Vector2(929, -434)
+shape = SubResource("RectangleShape2D_0h7mo")
+
+[node name="bench" type="Node2D" parent="environment"]
+position = Vector2(6064, -261)
+
+[node name="Bench" type="Sprite2D" parent="environment/bench"]
+texture = ExtResource("5_d21ai")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/bench/Bench"]
+position = Vector2(-2, 3.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/bench/Bench/StaticBody2D"]
+position = Vector2(2, -15.25)
+shape = SubResource("RectangleShape2D_rj586")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="environment/bench/Bench/StaticBody2D"]
+occluder = SubResource("OccluderPolygon2D_fs4d3")
+
+[node name="tree" type="Node2D" parent="environment"]
+
+[node name="Tree" type="Sprite2D" parent="environment/tree"]
+position = Vector2(975, -1317)
+texture = ExtResource("2_0hol4")
+
+[node name="Tree2" type="Sprite2D" parent="environment/tree"]
+z_index = -2
+position = Vector2(7135, -1325)
+texture = ExtResource("2_0hol4")
+
+[node name="Tree3" type="Sprite2D" parent="environment/tree"]
+z_index = -1
+position = Vector2(4146, -1317)
+texture = ExtResource("2_0hol4")
+
+[node name="Wall2" type="Sprite2D" parent="environment/tree"]
+z_index = -2
+position = Vector2(2406, -571)
+scale = Vector2(1.5, 1)
+texture = ExtResource("8_hqns4")
+
+[node name="Wall3" type="Sprite2D" parent="environment/tree"]
+z_index = -3
+position = Vector2(7171, -557)
+scale = Vector2(1.6, 1.142)
+texture = ExtResource("8_hqns4")
+
+[node name="vending_machine" type="Node2D" parent="environment"]
+
+[node name="VendingMachine" type="Sprite2D" parent="environment/vending_machine"]
+position = Vector2(3056, -678)
+texture = ExtResource("4_0hol4")
+
+[node name="VendingMachine2" type="Sprite2D" parent="environment/vending_machine"]
+z_index = -1
+position = Vector2(6500, -633)
+texture = ExtResource("4_0hol4")
+
+[node name="TrashScene2" type="Node2D" parent="environment"]
+
+[node name="CollectableTrash" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(3313, -409)
+
+[node name="CollectableTrash2" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(2330, -599)
+
+[node name="CollectableTrash3" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(2530, -437)
+
+[node name="CollectableTrash4" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(3500, -337)
+scale = Vector2(1.86469, 1.37676)
+
+[node name="CollectableTrash5" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(3916, -287)
+
+[node name="CollectableTrash6" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(3734, -276)
+
+[node name="CollectableTrash7" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(3819, -444)
+
+[node name="CollectableTrash8" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(4769, -429)
+
+[node name="CollectableTrash9" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(5229, -336)
+
+[node name="CollectableTrash10" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(6766, -376)
+scale = Vector2(2.11244, 1.25184)
+
+[node name="CollectableTrash11" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(6870, -319)
+
+[node name="CollectableTrash12" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(8203, -326)
+
+[node name="CollectableTrash13" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(8331, -434)
+
+[node name="CollectableTrash14" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(7951, -345)
+
+[node name="CollectableTrash15" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
+position = Vector2(7812, -509)
+rotation = nan
+scale = Vector2(nan, 1e-05)
+skew = nan
+
+[node name="TrashScene1" type="Node2D" parent="environment"]
+
+[node name="CollectableTrash" parent="environment/TrashScene1" instance=ExtResource("8_rj586")]
+position = Vector2(2390, -443)
+
+[node name="CollectableTrash4" parent="environment/TrashScene1" instance=ExtResource("8_rj586")]
+position = Vector2(6169, -479)
+
+[node name="CollectableTrash5" parent="environment/TrashScene1" instance=ExtResource("8_rj586")]
+position = Vector2(6259, -526)
+
+[node name="CollectableTrash2" parent="environment/TrashScene1" instance=ExtResource("8_rj586")]
+position = Vector2(4214, -212)
+
+[node name="CollectableTrash3" parent="environment/TrashScene1" instance=ExtResource("8_rj586")]
+position = Vector2(5007, -225)
+
+[node name="birds" type="Node2D" parent="environment"]
+
+[node name="Bird" type="Sprite2D" parent="environment/birds"]
+position = Vector2(2682, -209)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_0h7mo")
+script = ExtResource("10_ei405")
+
+[node name="Bird2" type="Sprite2D" parent="environment/birds"]
+position = Vector2(5594, -1128)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_0h7mo")
+
+[node name="Bird3" type="Sprite2D" parent="environment/birds"]
+position = Vector2(9069, -222)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("13_0h7mo")
+script = ExtResource("10_ei405")
+
+[node name="Dirt" type="Sprite2D" parent="environment/birds"]
+position = Vector2(8396, -180)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_ta5nu")
+
+[node name="CollectableTrash" parent="environment" instance=ExtResource("8_rj586")]
+position = Vector2(2342, -296)
+
+[node name="CollectableTrash2" parent="environment" instance=ExtResource("8_rj586")]
+position = Vector2(2485, -300)
+
+[node name="CollectableTrash3" parent="environment" instance=ExtResource("8_rj586")]
+position = Vector2(2658, -558)
+scale = Vector2(0.993119, 0.932446)
+
+[node name="Player" parent="." instance=ExtResource("6_kdubu")]
+position = Vector2(2066, -589)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0.000166416, -138.333)
+zoom = Vector2(0.4, 0.4)
+limit_left = 0
+limit_right = 9400
+limit_bottom = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+script = ExtResource("7_d21ai")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+occluder = SubResource("OccluderPolygon2D_7vxoj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Player"]
+offset_left = 200.0
+offset_top = -300.0
+offset_right = 240.0
+offset_bottom = -260.0
+scale = Vector2(2.82389, 2.12592)
+script = ExtResource("21_7vxoj")
+
+[node name="sun" type="DirectionalLight2D" parent="."]
+energy = 0.1
+
+[node name="city" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(4822, -3239)
+scale = Vector2(16, 16)
+texture = ExtResource("12_x0ka3")
+
+[node name="cat" type="Sprite2D" parent="."]
+position = Vector2(6666, -287)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("14_d2bti")
+
+[node name="rose" type="Sprite2D" parent="."]
+position = Vector2(8396, -241)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("16_flf07")
+
+[node name="first_check" type="Area2D" parent="."]
+position = Vector2(8400, -300)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("16_k73cj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="first_check"]
+position = Vector2(-1420, -1383.33)
+shape = SubResource("RectangleShape2D_ta5nu")
+
+[node name="Man" type="Sprite2D" parent="."]
+position = Vector2(8777, -592)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("16_ta5nu")
+
+[node name="Global" type="Node2D" parent="."]
+script = ExtResource("19_rjqkl")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
+position = Vector2(6260.4, -1873.29)
+scale = Vector2(10, 10)
+script = ExtResource("19_7vxoj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 8325.0
+offset_top = -379.0
+offset_right = 8527.0
+offset_bottom = -263.0
+scale = Vector2(9.99322, 12.7609)
+pivot_offset = Vector2(229.4, 166.032)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("20_fs4d3")
+theme_override_font_sizes/normal_font_size = 15
+script = ExtResource("25_gt76g")
+metadata/fill = false
+
+[node name="EnemyTrashcan" parent="." instance=ExtResource("25_bjha6")]
+position = Vector2(4523, -284)
+
+[node name="EnemyTrashcan2" parent="." instance=ExtResource("25_bjha6")]
+position = Vector2(7405, -298)
+
+[connection signal="incrementScore" from="environment/TrashScene1/CollectableTrash" to="Player" method="_on_collectable_trash_increment_score"]
+[connection signal="body_entered" from="first_check" to="Player" method="_on_first_check_body_entered"]

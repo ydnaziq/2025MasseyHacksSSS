@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://detav06gw3iw5"]
+
+[ext_resource type="Script" uid="uid://c1luigg8sui16" path="res://CollectableTrash/collectable_trash.tres_scene_2.gd" id="1_25tyv"]
+[ext_resource type="Texture2D" uid="uid://s087jmhgnsvj" path="res://assets/trashbag.png" id="2_y4tua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tmno"]
+size = Vector2(108, 103)
+
+[node name="CollectableTrash" type="Area2D"]
+script = ExtResource("1_25tyv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(-1, 16)
+shape = SubResource("RectangleShape2D_8tmno")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.382813, 0.382813)
+texture = ExtResource("2_y4tua")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
