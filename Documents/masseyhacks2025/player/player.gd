@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
+
 @onready var _animated_sprite = $AnimatedSprite2D
 
-var new_transform = Transform2D()
 
+var new_transform = Transform2D()
 var playerVelocity = Vector2(0, 0)
 var acceleration = 30
 var slowdownAcceleration = 100
@@ -13,10 +14,9 @@ var SPEED = 550
 var stopJump = true;
 var canJump = true;
 var midAirMoveScale = 1
-signal touching_trash
 
 
-func _process(delta):
+func _process(_delta):
 	_animated_sprite.play("default")
 	if is_on_floor():
 		stopJump = true
@@ -34,7 +34,7 @@ func _process(delta):
 
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_pressed("Jump") && stopJump && canJump:
 		velocity.y = velocity.y - jumpAcceleration
 		if velocity.y < -700:
@@ -57,7 +57,8 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-func _on_first_check_body_entered(body: Node2D) -> void:
+
+func _on_first_check_body_entered(_body: Node2D) -> void:
 	if Global.change_scene == false:
 		Global.scene += 1
 		Global.cutscene = true

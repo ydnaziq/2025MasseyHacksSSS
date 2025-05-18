@@ -1,7 +1,7 @@
 extends Camera2D
 
 
-func _process(delta):
+func _process(_delta):
 	if Global.cutscene:
 		zoom = Vector2(0.2 , 0.2)
 		offset.x = 100

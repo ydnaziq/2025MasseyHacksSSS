@@ -1,7 +1,6 @@
 extends Area2D
 
 
-signal incrementScore
 var medianPosition = position.y
 var upOrDown = "up"
 var relativePosition = 0
@@ -24,8 +23,9 @@ func _process(_delta):
 			if relativePosition == -50:
 				upOrDown = "up"
 
+
 func _on_body_entered(_body):
-	if Global.scene == 1:
+	if not Global.scene == 0:
 		while scale > Vector2(0.1, 0.1):
 			scale *= i 
 			i -= 0.1

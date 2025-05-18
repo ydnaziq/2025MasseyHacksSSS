@@ -1,7 +1,6 @@
 extends Area2D
 
 
-signal incrementScore
 var medianPosition = position.y
 var upOrDown = "up"
 var relativePosition = 0

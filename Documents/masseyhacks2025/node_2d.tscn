@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://detav06gw3iw5" path="res://CollectableTrash/collectable_trash_scene_2.tscn" id="13_2nhjh"]
 [ext_resource type="Texture2D" uid="uid://b1prk4q13sjoh" path="res://assets/cat.png" id="14_d2bti"]
 [ext_resource type="Texture2D" uid="uid://baybfpat7mnuh" path="res://assets/rpse.png" id="16_flf07"]
-[ext_resource type="Script" uid="uid://b3y860thwtfl1" path="res://scripts/first_check.gd" id="16_k73cj"]
 [ext_resource type="Texture2D" uid="uid://ofk3x3owkiu7" path="res://assets/man.png" id="16_ta5nu"]
 [ext_resource type="Script" uid="uid://dk5s6tsnn6y2m" path="res://scripts/directional_light_2d.gd" id="19_7vxoj"]
 [ext_resource type="Script" uid="uid://chwre4q6t24lr" path="res://scripts/global.gd" id="19_rjqkl"]
@@ -70,6 +69,10 @@ polygon = PackedVector2Array(-575, -74.25, 563, -72.25, 563, -14.25, 45, -12.25,
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7vxoj"]
 polygon = PackedVector2Array(-13.3333, -131.667, -131.667, -8.33337, -200, 116.667, -223.333, 181.667, 115, 195, 218.333, 178.333, 158.333, 76.6666, 115, 13.3333, 83.3333, -56.6666, 46.6667, -128.333)
+
+[sub_resource type="GDScript" id="GDScript_bjha6"]
+script/source = "extends Area2D
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ta5nu"]
 size = Vector2(24.9995, 3665)
@@ -241,7 +244,7 @@ position = Vector2(8331, -434)
 position = Vector2(7951, -345)
 
 [node name="CollectableTrash15" parent="environment/TrashScene2" instance=ExtResource("13_2nhjh")]
-position = Vector2(7812, -509)
+position = Vector2(nan, nan)
 rotation = nan
 scale = Vector2(nan, 1e-05)
 skew = nan
@@ -262,6 +265,16 @@ position = Vector2(4214, -212)
 
 [node name="CollectableTrash3" parent="environment/TrashScene1" instance=ExtResource("8_rj586")]
 position = Vector2(5007, -225)
+
+[node name="CollectableTrash6" parent="environment/TrashScene1" instance=ExtResource("8_rj586")]
+position = Vector2(2342, -296)
+
+[node name="CollectableTrash7" parent="environment/TrashScene1" instance=ExtResource("8_rj586")]
+position = Vector2(2485, -300)
+
+[node name="CollectableTrash8" parent="environment/TrashScene1" instance=ExtResource("8_rj586")]
+position = Vector2(2658, -558)
+scale = Vector2(0.993119, 0.932446)
 
 [node name="birds" type="Node2D" parent="environment"]
 
@@ -286,16 +299,6 @@ script = ExtResource("10_ei405")
 position = Vector2(8396, -180)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("12_ta5nu")
-
-[node name="CollectableTrash" parent="environment" instance=ExtResource("8_rj586")]
-position = Vector2(2342, -296)
-
-[node name="CollectableTrash2" parent="environment" instance=ExtResource("8_rj586")]
-position = Vector2(2485, -300)
-
-[node name="CollectableTrash3" parent="environment" instance=ExtResource("8_rj586")]
-position = Vector2(2658, -558)
-scale = Vector2(0.993119, 0.932446)
 
 [node name="Player" parent="." instance=ExtResource("6_kdubu")]
 position = Vector2(2066, -589)
@@ -344,7 +347,7 @@ texture = ExtResource("16_flf07")
 [node name="first_check" type="Area2D" parent="."]
 position = Vector2(8400, -300)
 scale = Vector2(0.3, 0.3)
-script = ExtResource("16_k73cj")
+script = SubResource("GDScript_bjha6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="first_check"]
 position = Vector2(-1420, -1383.33)
@@ -384,5 +387,4 @@ position = Vector2(4523, -284)
 [node name="EnemyTrashcan2" parent="." instance=ExtResource("25_bjha6")]
 position = Vector2(7405, -298)
 
-[connection signal="incrementScore" from="environment/TrashScene1/CollectableTrash" to="Player" method="_on_collectable_trash_increment_score"]
 [connection signal="body_entered" from="first_check" to="Player" method="_on_first_check_body_entered"]
