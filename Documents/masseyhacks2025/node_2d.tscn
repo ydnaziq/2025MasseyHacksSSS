@@ -22,7 +22,7 @@
 [ext_resource type="Script" uid="uid://dk5s6tsnn6y2m" path="res://scripts/directional_light_2d.gd" id="19_7vxoj"]
 [ext_resource type="Script" uid="uid://chwre4q6t24lr" path="res://scripts/global.gd" id="19_rjqkl"]
 [ext_resource type="FontFile" uid="uid://b1s2mxajxrlhl" path="res://assets/font/BaseballClubSolid-E4X69.ttf" id="20_fs4d3"]
-[ext_resource type="Script" uid="uid://vyufh53m621k" path="res://rich_text_label.gd" id="21_7vxoj"]
+[ext_resource type="Script" uid="uid://vyufh53m621k" path="res://scripts/text_score.gd" id="21_7vxoj"]
 [ext_resource type="PackedScene" uid="uid://b56tnvr461xbh" path="res://EnemyTrashCan/enemy_trashcan.tscn" id="25_bjha6"]
 [ext_resource type="Script" uid="uid://bogigoihm8cmk" path="res://scripts/rich_text_label.gd" id="25_gt76g"]
 
