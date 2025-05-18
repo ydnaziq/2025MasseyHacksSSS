@@ -68,7 +68,7 @@ size = Vector2(1154, 77.25)
 polygon = PackedVector2Array(-575, -74.25, 563, -72.25, 563, -14.25, 45, -12.25, -579, -12.25)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7vxoj"]
-polygon = PackedVector2Array(-13.3333, -131.667, -131.667, -8.33337, -200, 116.667, -223.333, 181.667, 115, 195, 218.333, 178.333, 158.333, 76.6666, 115, 13.3333, 83.3333, -56.6666, 46.6667, -128.333)
+polygon = PackedVector2Array(-76.6667, 103.333, -163.333, 45, -200, 116.667, -223.333, 181.667, 115, 195, 218.333, 178.333, 158.333, 76.6666, 148.333, 65, 136.667, 91.6666, 106.667, 113.333)
 
 [sub_resource type="GDScript" id="GDScript_bjha6"]
 script/source = "extends Area2D
